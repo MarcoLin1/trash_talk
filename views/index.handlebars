@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row">
+    {{!-- title --}}
+    <h1 class="title col-12 d-flex justify-content-center mt-4 mb-4"
+      style="font-family: 'Shadows Into Light', cursive; ">Who do you want to talk to ?</h1>
+  </div>
+
+  <form method="POST" action="/">
+
+    <div class="row d-flex justify-content-center">
+      <div class="card col-3" style="width: 18rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          class="card-img-top" alt="..." style="height: 14rem;">
+        <div class="card-body">
+          <p class="card-text text-center" style="font-family: 'Shadows Into Light', cursive;font-size:x-large;">Crazy
+            Engineer
+          </p>
+        </div>
+      </div>
+
+      <div class="card col-3" style="width: 18rem;">
+        <img src="https://www.pomarri.com/wp-content/uploads/2016/07/Fotolia_101287093_Subscription_Monthly_M.jpg"
+          class="card-img-top" alt="..." style="height: 14rem;">
+        <div class="card-body">
+          <p class="card-text text-center" style="font-family: 'Shadows Into Light', cursive;font-size:x-large;">Angry
+            Designer
+          </p>
+        </div>
+      </div>
+
+      <div class="card col-3" style="width: 18rem;">
+        <img src="http://integrationtraining.co.uk/blog/wp-content/uploads/2011/05/HR_crazy.jpg" class="card-img-top"
+          alt="..." style="height: 14rem;">
+        <div class="card-body">
+          <p class="card-text text-center" style="font-family: 'Shadows Into Light', cursive;font-size:x-large;">
+            Critical Entrepreneur
+          </p>
+        </div>
+      </div>
+
+      <div class="card col-3" style="width: 18rem;">
+        <img src="https://au.res.keymedia.com/files/image/Human%20Capital/AsleepAtDesk(300x225)(1).jpg"
+          class="card-img-top" alt="..." style="height: 14rem;">
+        <div class="card-body">
+          <p class="card-text text-center" style="font-family: 'Shadows Into Light', cursive; font-size:x-large;">
+            Fatigued HR
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="row d-flex justify-content-center">
+
+      <div class="custom-control custom-checkbox col-3 d-flex justify-content-center mt-3">
+        <input type="checkbox" class="custom-control-input" id="engineer" name="engineer" {{#if mark.engineer}} checked
+          {{/if}}>
+        <label class="custom-control-label" for="engineer"
+          style="font-family: 'Shadows Into Light', cursive;">Engineer</label>
+      </div>
+
+      <div class="custom-control custom-checkbox col-3 d-flex justify-content-center mt-3">
+        <input type="checkbox" class="custom-control-input" id="designer" name="designer" {{#if mark.designer}} checked
+          {{/if}}>
+        <label class="custom-control-label" for="designer"
+          style="font-family: 'Shadows Into Light', cursive;">Designer</label>
+      </div>
+
+      <div class="custom-control custom-checkbox col-3 d-flex justify-content-center mt-3">
+        <input type="checkbox" class="custom-control-input" id="entrepreneur" name="entrepreneur" {{#if
+          mark.entrepreneur}} checked {{/if}}>
+        <label class="custom-control-label" for="entrepreneur"
+          style="font-family: 'Shadows Into Light', cursive;">Entrepreneur</label>
+      </div>
+
+      <div class="custom-control custom-checkbox col-3 d-flex justify-content-center mt-3">
+        <input type="checkbox" class="custom-control-input" id="HR" name="HR" {{#if mark.HR}} checked {{/if}}>
+        <label class="custom-control-label" for="HR" style="font-family: 'Shadows Into Light', cursive;">HR</label>
+      </div>
+
+    </div>
+
+    <div class="row d-flex justify-content-start mt-5">
+      <button class="btn btn-warning mr-3"
+        style="max-height: 50px; font-family: 'Ravi Prakash', cursive; font-size:x-large" type="submit">Generate
+        Trash Talk</button>
+      <div class="col-9 alert alert-info d-flex align-items-center" role="alert"
+        style="height: 100px; border-radius: 2%; border: 2px solid tomato;">
+        <div class="mr-2">
+          {{!-- <div style="color: darksalmon;">Your trash talk :</div> --}}
+          <div style="color: darkred;font-family: 'Noto Sans TC', sans-serif;" class="text-center">
+            {{trashTalk}}</div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+
+
+</div>
