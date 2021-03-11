@@ -19,16 +19,16 @@ function generateTrashTalk(talks) {
   // create books to store task and phrase for user to pick up
   let occupation = ''
 
-  if (talks.engineer === 'on') {
+  if (talks.job === 'engineer') {
     occupation = '工程師'
     return `身為一個${occupation}，${randomNum(task.engineer, phrase)}吧!!!`
-  } else if (talks.designer === 'on') {
+  } else if (talks.job === 'designer') {
     occupation = '設計師'
     return `身為一個${occupation}，${randomNum(task.designer, phrase)}吧!!!`
-  } else if (talks.entrepreneur === 'on') {
+  } else if (talks.job === 'entrepreneur') {
     occupation = '創業家'
     return `身為一個${occupation}，${randomNum(task.entrepreneur, phrase)}吧!!!`
-  } else if (talks.HR === 'on') {
+  } else if (talks.job === 'HR') {
     occupation = 'HR'
     return `身為一個${occupation}，${randomNum(task.HR, phrase)}吧!!!`
   } else {
