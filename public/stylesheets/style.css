@@ -1,0 +1,13 @@
+.navbarTitle {
+  color: rgb(168, 152, 6);
+}
+
+.card:hover {
+  height: 300px;
+  border-radius: 5%;
+}
+
+.radio-label:hover {
+  color: brown;
+  font-size: xx-large;
+}
