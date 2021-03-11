@@ -9,8 +9,11 @@ const generateTrashTalk = require('./generateTrashTalk')
 app.engine('handlebars', exhbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
+// setting static file
+app.use(express.static('public'))
+
 // setting body-parser
-app.use(bodyParser.urlencoded({ extended: true }), express.static('stylesheets'))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 //localhost:3000
 app.get('/', (req, res) => {
