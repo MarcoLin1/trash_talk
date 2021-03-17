@@ -55,25 +55,29 @@
     <div class="row d-flex justify-content-center">
 
       <div class="custom-control custom-checkbox col-3 d-flex justify-content-center mt-3">
-        <input type="radio" class="radio-input mr-2" id="blankRadio1" name="job" value="engineer">
+        <input type="radio" class="radio-input mr-2" id="blankRadio1" name="job" value="engineer" {{#if isEngineer}}
+          checked {{/if}}>
         <label class="radio-label" for="blankRadio1"
           style="font-family: 'Shadows Into Light', cursive;">Engineer</label>
       </div>
 
       <div class="custom-control custom-checkbox col-3 d-flex justify-content-center mt-3">
-        <input type="radio" class="radio-input mr-2" id="blankRadio2" name="job" value="designer">
+        <input type="radio" class="radio-input mr-2" id="blankRadio2" name="job" value="designer" {{#if isDesigner}}
+          checked {{/if}}>
         <label class="radio-label" for="blankRadio2"
           style="font-family: 'Shadows Into Light', cursive;">Designer</label>
       </div>
 
       <div class="custom-control custom-checkbox col-3 d-flex justify-content-center mt-3">
-        <input type="radio" class="radio-input mr-2" id="blankRadio3" name="job" value="entrepreneur">
+        <input type="radio" class="radio-input mr-2" id="blankRadio3" name="job" value="entrepreneur" {{#if
+          isEntrepreneur}} checked {{/if}}>
         <label class="radio-label" for="blankRadio3"
           style="font-family: 'Shadows Into Light', cursive;">Entrepreneur</label>
       </div>
 
       <div class="custom-control custom-checkbox col-3 d-flex justify-content-center mt-3">
-        <input type="radio" class="radio-input mr-2" id="blankRadio4" name="job" value="HR">
+        <input type="radio" class="radio-input mr-2" id="blankRadio4" name="job" value="HR" {{#if isHR}} checked
+          {{/if}}>
         <label class="radio-label" for="blankRadio4" style="font-family: 'Shadows Into Light', cursive;">HR</label>
       </div>
 

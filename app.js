@@ -23,7 +23,14 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   console.log(req.body)
-  res.render('index', { trashTalk: generateTrashTalk(req.body), mark: req.body })
+  res.render('index', {
+    trashTalk: generateTrashTalk(req.body),
+    mark: req.body,
+    isEngineer: req.body.job === 'engineer',
+    isDesigner: req.body.job === 'designer',
+    isEntrepreneur: req.body.job === 'entrepreneur',
+    isHR: req.body.job === 'HR'
+  })
 })
 
 
